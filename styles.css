@@ -1,12 +1,22 @@
+/* styles.css */
+
+/* Step 1: Import Tailwind's base styles */
+@tailwind base;
+
+/* Step 2: Import Tailwind's component styles */
+@tailwind components;
+
+/* Step 3: Your custom CSS styles */
+
 /* General Styles */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
-    color: #333;
+    color: theme('colors.eerie-black.DEFAULT');
 }
 
 a {
-    color: #007acc;
+    color: theme('colors.coquelicot.500');
     text-decoration: none;
 }
 
@@ -16,7 +26,7 @@ a:hover {
 
 /* Header Styles */
 header {
-    background-color: #f8f8f8;
+    background-color: theme('colors.beige.500');
     padding: 20px;
 }
 
@@ -24,6 +34,7 @@ header h1 {
     margin: 0;
 }
 
+/* Navigation Styles */
 nav ul {
     list-style: none;
     padding-left: 0;
@@ -65,17 +76,19 @@ main {
 }
 
 /* About and Contact Sections */
-#about, #contact {
+#about,
+#contact {
     margin-top: 40px;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #f8f8f8;
+    background-color: theme('colors.eerie-black.900');
     text-align: center;
     padding: 20px;
     margin-top: 40px;
     position: relative;
+    color: theme('colors.beige.500');
 }
 
 /* Social Media Icons */
@@ -86,12 +99,12 @@ footer {
 .socials a {
     display: inline-block;
     margin: 0 10px;
-    color: #333;
+    color: theme('colors.coquelicot.500');
     font-size: 24px;
 }
 
 .socials a:hover {
-    color: #007acc;
+    color: theme('colors.coquelicot.400');
 }
 
 /* Responsive Design */
@@ -105,3 +118,6 @@ footer {
         margin: 5px 0;
     }
 }
+
+/* Step 4: Import Tailwind's utility classes */
+@tailwind utilities;
