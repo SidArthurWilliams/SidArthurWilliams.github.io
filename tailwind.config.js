@@ -28,7 +28,9 @@ module.exports = {
         },
         bounce: {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-20px)' },
+          '25%': { transform: 'translateY(-10px)' },
+          '50%': { transform: 'translateY(0)' },
+          '75%': { transform: 'translateY(-10px)' },
         },
         flip: {
           '0%': { transform: 'scaleX(1)' },
@@ -38,7 +40,7 @@ module.exports = {
       },
       animation: {
         walk: 'walk 15s linear infinite',
-        bounce: 'bounce 2s ease-in-out infinite',
+        bounce: 'bounce 1s ease-in-out infinite',
         flip: 'flip 15s linear infinite',
       },
     },

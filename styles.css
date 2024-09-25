@@ -1,123 +1,30 @@
 /* styles.css */
 
-/* Step 1: Import Tailwind's base styles */
+/* Import Tailwind's base styles */
 @tailwind base;
 
-/* Step 2: Import Tailwind's component styles */
+/* Import Tailwind's component classes */
 @tailwind components;
 
-/* Step 3: Your custom CSS styles */
-
-/* General Styles */
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    color: theme('colors.eerie-black.DEFAULT');
-}
-
-a {
-    color: theme('colors.coquelicot.500');
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Header Styles */
-header {
-    background-color: theme('colors.beige.500');
-    padding: 20px;
-}
-
-header h1 {
-    margin: 0;
-}
-
-/* Navigation Styles */
-nav ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-nav li {
-    display: inline;
-    margin-right: 15px;
-}
-
-/* Main Content Styles */
-main {
-    padding: 20px;
-}
-
-/* Work Section */
-#work .projects {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.project {
-    flex: 1 1 calc(33% - 40px);
-    box-sizing: border-box;
-}
-
-.project img {
-    width: 100%;
-    height: auto;
-}
-
-.project h3 {
-    margin-top: 10px;
-}
-
-.project p {
-    margin: 5px 0 0 0;
-}
-
-/* About and Contact Sections */
-#about,
-#contact {
-    margin-top: 40px;
-}
-
-/* Footer Styles */
-footer {
-    background-color: theme('colors.eerie-black.900');
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    position: relative;
-    color: theme('colors.beige.500');
-}
-
-/* Social Media Icons */
-.socials {
-    margin-top: 10px;
-}
-
-.socials a {
-    display: inline-block;
-    margin: 0 10px;
-    color: theme('colors.coquelicot.500');
-    font-size: 24px;
-}
-
-.socials a:hover {
-    color: theme('colors.coquelicot.400');
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .project {
-        flex: 1 1 100%;
-    }
-
-    nav li {
-        display: block;
-        margin: 5px 0;
-    }
-}
-
-/* Step 4: Import Tailwind's utility classes */
+/* Import Tailwind's utility classes */
 @tailwind utilities;
+
+/* 
+  Custom CSS for Pausing Animations on Hover 
+  This section adds a custom keyframe for pausing animations and a corresponding utility class.
+*/
+
+/* Define keyframes for pausing animation */
+@keyframes pause {
+  from {
+    animation-play-state: running;
+  }
+  to {
+    animation-play-state: paused;
+  }
+}
+
+/* Utility class to pause animations when hovered */
+.animate-pause:hover {
+  animation-play-state: paused;
+}
