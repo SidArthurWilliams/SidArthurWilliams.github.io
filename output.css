@@ -682,8 +682,24 @@ footer {
 
 /* Step 4: Import Tailwind's utility classes */
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.right-0 {
+  right: 0px;
 }
 
 .mt-10 {
@@ -694,16 +710,16 @@ footer {
   margin-top: 0.5rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
 
 .mt-6 {
   margin-top: 1.5rem;
-}
-
-.mt-20 {
-  margin-top: 5rem;
 }
 
 .block {
@@ -726,8 +742,64 @@ footer {
   height: auto;
 }
 
+.w-24 {
+  width: 6rem;
+}
+
 .w-full {
   width: 100%;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: translateY(-20px);
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes flip {
+  0% {
+    transform: scaleX(1);
+  }
+
+  50% {
+    transform: scaleX(-1);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.animate-flip {
+  animation: flip 15s linear infinite;
+}
+
+@keyframes walk {
+  0% {
+    transform: translateX(-150%);
+  }
+
+  50% {
+    transform: translateX(150%);
+  }
+
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+.animate-walk {
+  animation: walk 15s linear infinite;
 }
 
 .grid-cols-1 {
@@ -756,6 +828,10 @@ footer {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.5rem * var(--tw-space-x-reverse));
   margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .bg-beige-500 {
@@ -812,6 +888,11 @@ footer {
   font-weight: 600;
 }
 
+.text-beige-500 {
+  --tw-text-opacity: 1;
+  color: rgb(240 230 140 / var(--tw-text-opacity));
+}
+
 .text-coquelicot-500 {
   --tw-text-opacity: 1;
   color: rgb(255 87 51 / var(--tw-text-opacity));
@@ -820,11 +901,6 @@ footer {
 .text-eerie-black {
   --tw-text-opacity: 1;
   color: rgb(27 27 27 / var(--tw-text-opacity));
-}
-
-.text-beige-500 {
-  --tw-text-opacity: 1;
-  color: rgb(240 230 140 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -846,7 +922,17 @@ footer {
   color: rgb(255 111 89 / var(--tw-text-opacity));
 }
 
+@media (min-width: 640px) {
+  .sm\:w-28 {
+    width: 7rem;
+  }
+}
+
 @media (min-width: 768px) {
+  .md\:w-32 {
+    width: 8rem;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
