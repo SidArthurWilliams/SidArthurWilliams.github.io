@@ -1,11 +1,20 @@
 // tailwind.config.js
+
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./**/*.html", "./styles.css"],
+  content: [
+    "./*.html",
+    "./**/*.html",
+    "./**/*.js",
+  ],
   theme: {
     extend: {
+      // Custom Fonts
       fontFamily: {
         sans: ['"Poppins"', 'Helvetica', 'Arial', 'sans-serif'],
       },
+      
+      // Custom Colors
       colors: {
         'eerie-black': {
           DEFAULT: '#1B1B1B',
@@ -20,6 +29,8 @@ module.exports = {
           '500': '#F0E68C',
         },
       },
+      
+      // Custom Keyframes for Animations
       keyframes: {
         walk: {
           '0%': { transform: 'translateX(-150%)' },
@@ -38,10 +49,12 @@ module.exports = {
           '100%': { transform: 'scaleX(1)' },
         },
       },
+      
+      // Custom Animations
       animation: {
-        walk: 'walk 15s linear infinite',
+        walk: 'walk 12s linear infinite',
         bounce: 'bounce 1s ease-in-out infinite',
-        flip: 'flip 15s linear infinite',
+        flip: 'flip 12s linear infinite',
       },
     },
   },
