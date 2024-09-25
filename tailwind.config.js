@@ -2,16 +2,17 @@
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  // Specify the paths to all of your template files
   content: [
-    "./*.html",
-    "./**/*.html",
-    "./**/*.js",
+    "./*.html",        // All HTML files in the root directory
+    "./**/*.html",     // All HTML files in subdirectories
+    "./**/*.js",       // All JS files in subdirectories (if applicable)
   ],
   theme: {
     extend: {
       // Custom Fonts
       fontFamily: {
-        sans: ['"Poppins"', 'Helvetica', 'Arial', 'sans-serif'],
+        sans: ['"Poppins"', 'Helvetica', 'Arial', 'sans-serif'], // Primary sans-serif font
       },
       
       // Custom Colors
@@ -52,11 +53,11 @@ module.exports = {
       
       // Custom Animations
       animation: {
-        walk: 'walk 12s linear infinite',
-        bounce: 'bounce 1s ease-in-out infinite',
-        flip: 'flip 12s linear infinite',
+        walk: 'walk 12s linear infinite',      // Walk animation: moves images horizontally
+        bounce: 'bounce 1s ease-in-out infinite', // Bounce animation: adds vertical movement
+        flip: 'flip 12s linear infinite',      // Flip animation: flips images horizontally
       },
-    },
-  },
+    }, // End of extend
+  }, // End of theme
   plugins: [],
-};
+}; // End of module.exports

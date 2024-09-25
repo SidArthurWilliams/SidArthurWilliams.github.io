@@ -70,7 +70,7 @@
 
         <!-- Footer Section -->
         <footer class="bg-eerie-black-900 text-beige-500 text-center p-5 mt-20 relative overflow-hidden min-h-[75px]">
-            <p>© 2024 Sid Williams :-)</p>
+            <p id="footer-year">© 2024 Sid Williams :-)</p>
             <!-- Social Media Icons -->
             <div class="socials mt-4 flex justify-center space-x-6">
                 <a href="https://www.linkedin.com/in/sid-williams-04742032b/?trk=opento_sprofile_topcard" target="_blank" class="text-coquelicot-500 hover:text-coquelicot-400 transition-colors duration-300" aria-label="LinkedIn">
@@ -82,8 +82,15 @@
             </div>
             
             <!-- Animated Images -->
-            <img src="images/drawings/Monster.png" alt="Animated Monster walking and bouncing" class="absolute bottom-0 left-0 w-4 sm:w-5 md:w-6 animate-walk animate-bounce transform transition-transform duration-300 hover:scale-105" style="animation-delay: 0s;">
-            <img src="images/drawings/Croc.png" alt="Animated Crocodile walking and flipping" class="absolute bottom-0 right-0 w-4 sm:w-5 md:w-6 animate-walk animate-flip transform transition-transform duration-300 hover:scale-105" style="animation-delay: 7.5s;">
+            <img src="images/drawings/Monster.png" alt="Animated Monster walking and bouncing" class="absolute bottom-0 left-0 w-[10px] sm:w-[15px] md:w-[20px] animate-walk animate-bounce transform transition-transform duration-300 hover:scale-105" style="animation-delay: 0s;">
+            <img src="images/drawings/Croc.png" alt="Animated Crocodile walking and flipping" class="absolute bottom-0 right-0 w-[10px] sm:w-[15px] md:w-[20px] animate-walk animate-flip transform transition-transform duration-300 hover:scale-105" style="animation-delay: 7.5s;">
+            
+            <!-- Dynamic Year Update Script -->
+            <script>
+                const yearSpan = document.getElementById('footer-year');
+                const currentYear = new Date().getFullYear();
+                yearSpan.textContent = `© ${currentYear} Sid Williams :-)`;
+            </script>
         </footer>
     </body>
 </html> 
