@@ -73,8 +73,25 @@ main {
 footer {
     background-color: #f8f8f8;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     margin-top: 40px;
+    position: relative;
+}
+
+/* Social Media Icons */
+.socials {
+    margin-top: 10px;
+}
+
+.socials a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #333;
+    font-size: 24px;
+}
+
+.socials a:hover {
+    color: #007acc;
 }
 
 /* Responsive Design */
