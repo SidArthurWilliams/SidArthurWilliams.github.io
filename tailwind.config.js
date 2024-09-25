@@ -20,6 +20,27 @@ module.exports = {
           '500': '#F0E68C',
         },
       },
+      keyframes: {
+        walk: {
+          '0%': { transform: 'translateX(-150%)' },
+          '50%': { transform: 'translateX(150%)' },
+          '100%': { transform: 'translateX(-150%)' },
+        },
+        bounce: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        flip: {
+          '0%': { transform: 'scaleX(1)' },
+          '50%': { transform: 'scaleX(-1)' },
+          '100%': { transform: 'scaleX(1)' },
+        },
+      },
+      animation: {
+        walk: 'walk 15s linear infinite',
+        bounce: 'bounce 2s ease-in-out infinite',
+        flip: 'flip 15s linear infinite',
+      },
     },
   },
   plugins: [],
