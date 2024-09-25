@@ -702,6 +702,10 @@ footer {
   margin-top: 1.5rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
 .block {
   display: block;
 }
@@ -734,6 +738,10 @@ footer {
   flex-wrap: wrap;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .gap-8 {
   gap: 2rem;
 }
@@ -744,13 +752,28 @@ footer {
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .bg-beige-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(240 230 140 / var(--tw-bg-opacity));
 }
 
+.bg-eerie-black-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(13 13 13 / var(--tw-bg-opacity));
+}
+
 .p-5 {
   padding: 1.25rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .font-sans {
@@ -799,8 +822,23 @@ footer {
   color: rgb(27 27 27 / var(--tw-text-opacity));
 }
 
+.text-beige-500 {
+  --tw-text-opacity: 1;
+  color: rgb(240 230 140 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 .hover\:text-coquelicot-400:hover {
