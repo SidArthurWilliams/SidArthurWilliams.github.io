@@ -1,8 +1,11 @@
 // tailwind.config.js
 module.exports = {
-  content: ["./*.html"],
+  content: ["./**/*.html", "./styles.css"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Poppins"', 'Helvetica', 'Arial', 'sans-serif'],
+      },
       colors: {
         'eerie-black': {
           DEFAULT: '#1B1B1B',
